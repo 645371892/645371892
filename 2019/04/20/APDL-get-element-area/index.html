@@ -87,15 +87,13 @@
 <meta property="og:site_name" content="TQT&#39;s Blog">
 <meta property="og:description" content="问题描述如下图的2D平面网格模型，如何一次性提取所有单元的面积，并将单元编号和对应的面积写出到文本文件。  建立上图模型的APDL命令流如下12345678910/prep7et, 1, shell63 !定义单元类型rectng, 0, 20, 0, 20 !建立一个正方形，边长20lesize, 1, , , 2, 1 !设置边的网格数                     lesize,">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://i.loli.net/2019/04/20/5cbabbccaeed9.png">
 <meta property="og:image" content="https://i.loli.net/2019/04/20/5cbac2278c1dc.png">
-<meta property="og:image" content="https://i.loli.net/2019/04/20/5cbabca82c32e.png">
 <meta property="og:image" content="https://i.loli.net/2019/04/20/5cbac2277d9e8.png">
-<meta property="og:updated_time" content="2019-04-20T06:56:18.269Z">
+<meta property="og:updated_time" content="2019-04-20T07:03:10.243Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用APDL命令提取单元面积">
 <meta name="twitter:description" content="问题描述如下图的2D平面网格模型，如何一次性提取所有单元的面积，并将单元编号和对应的面积写出到文本文件。  建立上图模型的APDL命令流如下12345678910/prep7et, 1, shell63 !定义单元类型rectng, 0, 20, 0, 20 !建立一个正方形，边长20lesize, 1, , , 2, 1 !设置边的网格数                     lesize,">
-<meta name="twitter:image" content="https://i.loli.net/2019/04/20/5cbabbccaeed9.png">
+<meta name="twitter:image" content="https://i.loli.net/2019/04/20/5cbac2278c1dc.png">
 
 
 
@@ -372,12 +370,13 @@
 
       
         <h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>如下图的2D平面网格模型，如何一次性提取所有单元的面积，并将单元编号和对应的面积写出到文本文件。</p>
-<p><img src="https://i.loli.net/2019/04/20/5cbabbccaeed9.png" alt><br><img src="https://i.loli.net/2019/04/20/5cbac2278c1dc.png" alt></p>
+<p><img src="https://i.loli.net/2019/04/20/5cbac2278c1dc.png" alt></p>
 <p>建立上图模型的APDL命令流如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">/prep7</span><br><span class="line">et, 1, shell63 !定义单元类型</span><br><span class="line">rectng, 0, 20, 0, 20 !建立一个正方形，边长20</span><br><span class="line">lesize, 1, , , 2, 1 !设置边的网格数                     </span><br><span class="line">lesize, 4, , , 2, 1</span><br><span class="line">lesize, 2, , , 4, 1             </span><br><span class="line">lesize, 3, , , 4, 1</span><br><span class="line">amesh, 1 !面网格划分</span><br><span class="line">/pnum, elem, 1</span><br><span class="line">/replot</span><br></pre></td></tr></table></figure></p>
 <h1 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">*get,ENUM,elem,0,acount !获取单元个数，置于参数ENUM</span><br><span class="line">*get,EMIN,elem,0,num,min !获取最小单元编号，置于参数 EMIN  </span><br><span class="line">*get,EMAX,elem,0,num,max !获取最大单元编号，置于参数 EMAX  </span><br><span class="line">*dim,EAREA,array,ENUM,2 !定义一个数组，用于存放单元的编号和面积  </span><br><span class="line">k = 1  </span><br><span class="line">*do,i,EMIN,EMAX  </span><br><span class="line">*get,Ai,elem,i,AREA !获取单元i的面积(仅对面单元)  </span><br><span class="line">EAREA(k,1) = EMIN !将单元i的编号存入数组  </span><br><span class="line">EAREA(k,2) = Ai !将单元i的面积存入数组  </span><br><span class="line">k = k+1</span><br><span class="line">*enddo</span><br></pre></td></tr></table></figure>
 <p>但是此方法存在一个问题：假如单元的编号不连续，如单元编号为101，102，103，105，当i=104时，程序无法找到104单元而出错并终止。</p>
 <h1 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h1><p>针对方法一存在的不足，作者进行了改进，整体思路如下<br>1、采用单元数作为循环控制变量；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*do, i, 1, ElemNum</span><br></pre></td></tr></table></figure></p>
-<p>2、采用 elnext() 函数获取下一个单元编号；<br>3、将单元编号和单元面积存入数组后，采用*vwrite命令将数组写入文本文件；<br>本例写出的单元编号和单元面积结果如下<br><img src="https://i.loli.net/2019/04/20/5cbabca82c32e.png" alt><br><img src="https://i.loli.net/2019/04/20/5cbac2277d9e8.png" alt></p>
+<p>2、采用 elnext() 函数获取下一个单元编号；<br>3、将单元编号和单元面积存入数组后，采用*vwrite命令将数组写入文本文件；<br>本例写出的单元编号和单元面积结果如下</p>
+<p><img src="https://i.loli.net/2019/04/20/5cbac2277d9e8.png" alt></p>
 <p><strong>特别说明：*vwrite命令不能在命令流窗口中运行，而必须在ANSYS Batch模式下运行。</strong></p>
 <h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>经作者改进的方法二，可在ANSYS中一次性提取任意数量、编号不连续平面单元的面积，并将结果保存到文本文件，方便后续的绘图或是统计工作.</p>
 
