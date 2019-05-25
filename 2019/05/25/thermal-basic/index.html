@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="hertz,contact,">
+  <meta name="keywords" content="thermal,">
 
 
 
@@ -79,25 +79,18 @@
 
 
 
-<meta name="description" content="问题描述如下图，两个半径分别为R1和R2的长圆柱，在外力的作用下发生接触，单位长度压力的大小为F，试用ANSYS计算半接触长度b和接近距离d。  模型的具体参数如下图  分析假设和建模说明 假设两圆柱之间的接触为无摩擦接触； 采用平面单元进行分析，分别取圆的四分之一建立模型； 在两个圆柱接触区域分别定义局部面，并进行网格细化处理；  主要建模与分析步骤定义单元类型和材料参数1234567ET, 1">
-<meta name="keywords" content="hertz,contact">
+<meta name="description" content="热设计基础知识基础概念热量热量是指由于温度差而转移的能量，单位为焦耳。热量总是从温度高的介质传递到温度低的介质。 热流密度热流密度，也称热通量，是指单位时间内通过单位面积传递的热量。一般用q表示，单位为J/(m^2*S)。 热容量热容量是指一定质量的某种物质升高一定温度所需的热量，用C表示，单位为J/K，跟物质本身的比热容有关。 热阻热阻是指电子器件耗散的热流在传输过程中（通过一定的介质）所遇到的">
+<meta name="keywords" content="thermal">
 <meta property="og:type" content="article">
-<meta property="og:title" content="两圆柱之间的Hertz接触">
-<meta property="og:url" content="http://yoursite.com/2019/04/25/Hertz-contact-between-two-cylinders/index.html">
+<meta property="og:title" content="thermal-basic">
+<meta property="og:url" content="http://yoursite.com/2019/05/25/thermal-basic/index.html">
 <meta property="og:site_name" content="TQT&#39;s Blog">
-<meta property="og:description" content="问题描述如下图，两个半径分别为R1和R2的长圆柱，在外力的作用下发生接触，单位长度压力的大小为F，试用ANSYS计算半接触长度b和接近距离d。  模型的具体参数如下图  分析假设和建模说明 假设两圆柱之间的接触为无摩擦接触； 采用平面单元进行分析，分别取圆的四分之一建立模型； 在两个圆柱接触区域分别定义局部面，并进行网格细化处理；  主要建模与分析步骤定义单元类型和材料参数1234567ET, 1">
+<meta property="og:description" content="热设计基础知识基础概念热量热量是指由于温度差而转移的能量，单位为焦耳。热量总是从温度高的介质传递到温度低的介质。 热流密度热流密度，也称热通量，是指单位时间内通过单位面积传递的热量。一般用q表示，单位为J/(m^2*S)。 热容量热容量是指一定质量的某种物质升高一定温度所需的热量，用C表示，单位为J/K，跟物质本身的比热容有关。 热阻热阻是指电子器件耗散的热流在传输过程中（通过一定的介质）所遇到的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://i.loli.net/2019/04/25/5cc1ca9e7b178.png">
-<meta property="og:image" content="https://i.loli.net/2019/04/25/5cc1ca9e5c961.png">
-<meta property="og:image" content="https://i.loli.net/2019/04/27/5cc3e36634c4b.png">
-<meta property="og:image" content="https://i.loli.net/2019/04/27/5cc3def16531e.png">
-<meta property="og:image" content="https://i.loli.net/2019/04/27/5cc3df24d4645.png">
-<meta property="og:image" content="https://i.loli.net/2019/04/27/5cc3df69693ed.png">
-<meta property="og:updated_time" content="2019-04-27T05:17:22.475Z">
+<meta property="og:updated_time" content="2019-05-25T02:30:07.435Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="两圆柱之间的Hertz接触">
-<meta name="twitter:description" content="问题描述如下图，两个半径分别为R1和R2的长圆柱，在外力的作用下发生接触，单位长度压力的大小为F，试用ANSYS计算半接触长度b和接近距离d。  模型的具体参数如下图  分析假设和建模说明 假设两圆柱之间的接触为无摩擦接触； 采用平面单元进行分析，分别取圆的四分之一建立模型； 在两个圆柱接触区域分别定义局部面，并进行网格细化处理；  主要建模与分析步骤定义单元类型和材料参数1234567ET, 1">
-<meta name="twitter:image" content="https://i.loli.net/2019/04/25/5cc1ca9e7b178.png">
+<meta name="twitter:title" content="thermal-basic">
+<meta name="twitter:description" content="热设计基础知识基础概念热量热量是指由于温度差而转移的能量，单位为焦耳。热量总是从温度高的介质传递到温度低的介质。 热流密度热流密度，也称热通量，是指单位时间内通过单位面积传递的热量。一般用q表示，单位为J/(m^2*S)。 热容量热容量是指一定质量的某种物质升高一定温度所需的热量，用C表示，单位为J/K，跟物质本身的比热容有关。 热阻热阻是指电子器件耗散的热流在传输过程中（通过一定的介质）所遇到的">
 
 
 
@@ -127,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/04/25/Hertz-contact-between-two-cylinders/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/25/thermal-basic/">
 
 
 
 
 
-  <title>两圆柱之间的Hertz接触 | TQT's Blog</title>
+  <title>thermal-basic | TQT's Blog</title>
   
 
 
@@ -270,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/25/Hertz-contact-between-two-cylinders/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/25/thermal-basic/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TQT">
@@ -287,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">两圆柱之间的Hertz接触</h1>
+          <h1 class="post-title" itemprop="name headline">thermal-basic</h1>
         
 
         <div class="post-meta">
@@ -299,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-25T22:35:00+08:00">
-                2019-04-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-25T10:30:00+08:00">
+                2019-05-25
               </time>
             
 
@@ -336,7 +329,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  523
+                  956
                 </span>
               
 
@@ -352,7 +345,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  3
                 </span>
               
             </div>
@@ -373,50 +366,39 @@
       
 
       
-        <h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>如下图，两个半径分别为R1和R2的长圆柱，在外力的作用下发生接触，单位长度压力的大小为F，试用ANSYS计算半接触长度b和接近距离d。</p>
-<p><img src="https://i.loli.net/2019/04/25/5cc1ca9e7b178.png" alt></p>
-<p>模型的具体参数如下图</p>
-<p><img src="https://i.loli.net/2019/04/25/5cc1ca9e5c961.png" alt></p>
-<h1 id="分析假设和建模说明"><a href="#分析假设和建模说明" class="headerlink" title="分析假设和建模说明"></a>分析假设和建模说明</h1><ul>
-<li>假设两圆柱之间的接触为无摩擦接触；</li>
-<li>采用平面单元进行分析，分别取圆的四分之一建立模型；</li>
-<li>在两个圆柱接触区域分别定义局部面，并进行网格细化处理；</li>
+        <h1 id="热设计基础知识"><a href="#热设计基础知识" class="headerlink" title="热设计基础知识"></a>热设计基础知识</h1><h3 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h3><h5 id="热量"><a href="#热量" class="headerlink" title="热量"></a>热量</h5><p>热量是指由于温度差而转移的能量，单位为焦耳。热量总是从温度高的介质传递到温度低的介质。</p>
+<h5 id="热流密度"><a href="#热流密度" class="headerlink" title="热流密度"></a>热流密度</h5><p>热流密度，也称热通量，是指单位时间内通过单位面积传递的热量。一般用q表示，单位为J/(m^2*S)。</p>
+<h5 id="热容量"><a href="#热容量" class="headerlink" title="热容量"></a>热容量</h5><p>热容量是指一定质量的某种物质升高一定温度所需的热量，用C表示，单位为J/K，跟物质本身的比热容有关。</p>
+<h5 id="热阻"><a href="#热阻" class="headerlink" title="热阻"></a>热阻</h5><p>热阻是指电子器件耗散的热流在传输过程中（通过一定的介质）所遇到的阻力，是反映阻止热量传递的能力的综合参量。用Rθ表示，单位是℃/W；其特性跟电阻类似，与介质材料的热导率，体积，密度， 结构，表面积大小，颜色，几何尺寸与冷却条件等因素有关。</p>
+<h3 id="热传导定律"><a href="#热传导定律" class="headerlink" title="热传导定律"></a>热传导定律</h3><p>热传导定律也称为傅立叶定律，表明单位时间内通过给定截面的热量，正比例于垂直于该截面方向上的温度变化率和截面面积，而热量传递的方向则与温度升高的方向相反。</p>
+<p>傅立叶方程描述如下<br>$$<br>Q = \cfrac{K\cdot A \cdot \Delta T}{d}<br>$$<br>式中</p>
+<p>Q：热流量，单位W；</p>
+<p>K：导热系数，单位$W/m \cdot k$；</p>
+<p>A：接触面积，单位$\m^2$；</p>
+<p>$\Delta$：热量流入面与流出面之间的温差，单位°C；</p>
+<p>d：热量传递的厚度，单位m；</p>
+<h3 id="热设计的目标"><a href="#热设计的目标" class="headerlink" title="热设计的目标"></a>热设计的目标</h3><p>在给定有限的空间和重量条件下，尽量可能保持元器件良好的散热，使其在所处的工作环境条件下，不超过标准及规范所规定的最高温度。</p>
+<h5 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h5><ul>
+<li>优化PCB上元器件的布局；</li>
+<li>根据系统要求，选用合适的散热方式：传导，对流，辐射；</li>
+<li>选用更好的散热器件加强散热；</li>
 </ul>
-<h1 id="主要建模与分析步骤"><a href="#主要建模与分析步骤" class="headerlink" title="主要建模与分析步骤"></a>主要建模与分析步骤</h1><p>定义单元类型和材料参数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ET, 1, PLANE182 ! 2-D SOLID ELEMENTS</span><br><span class="line">ET, 2, TARGE169 ! 2-D TARGET ELEMENTS</span><br><span class="line">ET, 3, CONTA175 ! 2-D CONTACT ELEMENTS</span><br><span class="line">MP, EX, 1, 30000 ! SMALLER CYLINDER PROPERTIES</span><br><span class="line">MP, NUXY, 1, 0.25</span><br><span class="line">MP, EX, 2, 29120 ! LARGER CYLINDER PROPERTIES</span><br><span class="line">MP, NUXY, 2, 0.30</span><br></pre></td></tr></table></figure></p>
-<p>建立模型并划分网格如下，对接触区域的网格进行细化<br><img src="https://i.loli.net/2019/04/27/5cc3e36634c4b.png" alt></p>
-<p>利用ESURF命令分别在两个圆柱上定义接触单元<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">LSEL, S, LINE, , 9 ! SELECT CONTACT NODES ON SMALLER CYLINDER</span><br><span class="line">NSLL, , 1</span><br><span class="line">CM, CYL1, NODE</span><br><span class="line">REAL, 1</span><br><span class="line">TYPE, 3</span><br><span class="line">ESURF ! GENERATE COTAC175 ELEMENTS</span><br><span class="line">LSEL, S, LINE, , 3</span><br><span class="line">NSLL, , 1 ! SELECT TARGET NODES ON BIGGER CYLINDER</span><br><span class="line">REAL, 1</span><br><span class="line">TYPE, 2</span><br><span class="line">ESURF ! GENERATE TARGE169 ELEMENTS</span><br></pre></td></tr></table></figure></p>
-<p>求解后，提取Y方向的位移云图如下，Y方向最大位移值为 -0.4212<br><img src="https://i.loli.net/2019/04/27/5cc3def16531e.png" alt></p>
-<p>检查接触穿透情况，在命令流窗口输入如下命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plnsol, cont, pene</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://i.loli.net/2019/04/27/5cc3df24d4645.png" alt></p>
-<p>提取接近距离d和半接触长度b的命令流如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">/POST1</span><br><span class="line">NSEL, , LOC, Y, 23 ! SELECT TOP EDGE OF SMALLER CYLINDER</span><br><span class="line">*GET, D, NODE, NC, U, Y ! GET APPROACH DISTANCE (D)</span><br><span class="line">ESEL, S, TYPE, , 3 ! SELECT CONTACT ELEMENTS</span><br><span class="line">ETABLE, NSTAT, CONT, STAT ! STORE CONTACT STATUS</span><br><span class="line">ESEL, R, ETAB, NSTAT, 2, 2 ! SELECT ELEMENTS WITH CONTACT (STAT=2)</span><br><span class="line">CMSEL, S, CYL1 ! SELECT CONTACT COMPONENT NODES</span><br><span class="line">NSLE, R ! RESELECT NODES WITH CONTACT</span><br><span class="line">NSORT, LOC, X, 1 ! SORT CONTACT NODES BY ASCENDING X LOCATION</span><br><span class="line">*GET, B, SORT, , MAX ! GET SEMI-CONTACT LENGTH (B)</span><br></pre></td></tr></table></figure></p>
-<p>查看半接触长度b和接近距离d计算结果<br><img src="https://i.loli.net/2019/04/27/5cc3df69693ed.png" alt></p>
-<p>比较ANSYS计算结果和理论值，偏差小于5%</p>
-<table>
-<thead>
-<tr>
-<th>Table</th>
-<th style="text-align:right">Target</th>
-<th style="text-align:right">Mechanical APDL</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>d,mm</td>
-<td style="text-align:right">-0.4181</td>
-<td style="text-align:right">-0.4212</td>
-</tr>
-<tr>
-<td>b,mm</td>
-<td style="text-align:right">1.20</td>
-<td style="text-align:right">1.16</td>
-</tr>
-</tbody>
-</table>
-<h1 id="案例小结"><a href="#案例小结" class="headerlink" title="案例小结"></a>案例小结</h1><ul>
-<li>介绍了利用ESURF命令定义接触的方法；</li>
-<li>介绍了后处理中提取接触长度的方法，具有一定参考意义；</li>
-</ul>
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>ANSYS Mechanical APDL Verification Manual, VM191: Hertz contact between two cylinders</p>
+<h5 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h5><p>任何情况下，器件与整体箱体内部环境以及外壳的温升不要超出60℃。</p>
+<h3 id="散热方式"><a href="#散热方式" class="headerlink" title="散热方式"></a>散热方式</h3><h5 id="对流换热"><a href="#对流换热" class="headerlink" title="对流换热"></a>对流换热</h5><p>对流换热是指流体与其相接触的流体或固体表面，而且具有不同温度时，所发生的热量转移过程。</p>
+<p> 对流换热的计算一般采用牛顿所提出的公式 ：<br>$$<br>Q = \alpha \times A \times (T_1 - T_2)<br>$$<br> 其中</p>
+<p>$\alpha$为对流换热系数；</p>
+<p>$A$为与流体接触的壁面面积（$m^2$）；</p>
+<p>$T_1$为壁面温度（K）；</p>
+<p>$T_2$为流体平均温度（K）；</p>
+<p>从上面的公式可以看出，在热对流传递中，热量传递的数量跟热对流系数、有效接触面积以及温度差成正比，热对流系数越大，有效接触面积越大，温差越高，所能带走的热量就越多。</p>
+<p>根据流体产生流动的原因不同，分为自然对流与强迫对流。</p>
+<h5 id="辐射散热"><a href="#辐射散热" class="headerlink" title="辐射散热"></a>辐射散热</h5><p>借助于电磁波（红外线）的形式将热量传递出去，不需要任何的介质，传播方向为直线，可以在真空中传播。例如太阳的热量通过热辐射到达地球。</p>
+<p>辐射换热的考虑原则</p>
+<p>1）如果物体表面的温度低于50℃，可忽略颜色对辐射换热的影响；</p>
+<p>2）对一强迫风冷，由于散热表面的平均温度较低，一般可忽略辐射换热的贡献；</p>
+<p>3）如果物体表面的温度低于50℃，可不考虑辐射换热的影响；</p>
+<p>4）好的热辐射器，同样是好的热吸收器，所以应该避免太阳光的直射；</p>
+<p>5）辐射换热面积计算时，如表面积不规则，应采用投影面积；</p>
 
       
     </div>
@@ -463,9 +445,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hertz/" rel="tag"># hertz</a>
-          
-            <a href="/tags/contact/" rel="tag"># contact</a>
+            <a href="/tags/thermal/" rel="tag"># thermal</a>
           
         </div>
       
@@ -478,8 +458,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/20/APDL-get-element-area/" rel="next" title="利用APDL命令提取单元面积">
-                <i class="fa fa-chevron-left"></i> 利用APDL命令提取单元面积
+              <a href="/2019/05/04/thermal-propertyies-for-various-common-material/" rel="next" title="常用材料的热学特性">
+                <i class="fa fa-chevron-left"></i> 常用材料的热学特性
               </a>
             
           </div>
@@ -487,10 +467,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/04/thermal-propertyies-for-various-common-material/" rel="prev" title="常用材料的热学特性">
-                常用材料的热学特性 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -615,7 +591,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分析假设和建模说明"><span class="nav-number">2.</span> <span class="nav-text">分析假设和建模说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#主要建模与分析步骤"><span class="nav-number">3.</span> <span class="nav-text">主要建模与分析步骤</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#案例小结"><span class="nav-number">4.</span> <span class="nav-text">案例小结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">5.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#热设计基础知识"><span class="nav-number">1.</span> <span class="nav-text">热设计基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础概念"><span class="nav-number">1.0.1.</span> <span class="nav-text">基础概念</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#热量"><span class="nav-number">1.0.1.0.1.</span> <span class="nav-text">热量</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#热流密度"><span class="nav-number">1.0.1.0.2.</span> <span class="nav-text">热流密度</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#热容量"><span class="nav-number">1.0.1.0.3.</span> <span class="nav-text">热容量</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#热阻"><span class="nav-number">1.0.1.0.4.</span> <span class="nav-text">热阻</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#热传导定律"><span class="nav-number">1.0.2.</span> <span class="nav-text">热传导定律</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#热设计的目标"><span class="nav-number">1.0.3.</span> <span class="nav-text">热设计的目标</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#方法"><span class="nav-number">1.0.3.0.1.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#目标"><span class="nav-number">1.0.3.0.2.</span> <span class="nav-text">目标</span></a></li></ol></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#散热方式"><span class="nav-number">1.0.4.</span> <span class="nav-text">散热方式</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#对流换热"><span class="nav-number">1.0.4.0.1.</span> <span class="nav-text">对流换热</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#辐射散热"><span class="nav-number">1.0.4.0.2.</span> <span class="nav-text">辐射散热</span></a></li></ol></li></div>
             
 
           </div>
