@@ -91,7 +91,7 @@
 <meta property="og:image" content="https://i.loli.net/2019/07/28/5d3d26632fbf936221.png">
 <meta property="og:image" content="https://i.loli.net/2019/07/28/5d3d2663116fa52773.png">
 <meta property="og:image" content="https://i.loli.net/2019/07/28/5d3d26631eef020005.png">
-<meta property="og:updated_time" content="2019-07-28T04:38:37.074Z">
+<meta property="og:updated_time" content="2019-07-28T09:25:39.638Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="三维随机颗粒增强复合材料晶胞APDL建模">
 <meta name="twitter:description" content="I 背景知识复合材料是由两种或两种以上物理和化学性质不同的物质组合而成的一种多相固体材料。复合材料具备质量轻，较高的比强度、比模量，较好的导热、隔热、隔音、减振、耐磨等特点，广泛应用于航空航天、汽车等行业。 在复合材料中，连续相成为基体，分散相组成增强体。复合材料按照基体材料种类分为树脂基、金属基和陶瓷基；按照增强形态分为纤维增强、颗粒增强和叠层（层状）增强。 颗粒增强金属基复合材料是以碳化物、氮">
@@ -393,7 +393,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x=rand(xmin,xmax)</span><br><span class="line">y=rand(ymin,ymax)</span><br><span class="line">z=rand(zmin,zmax)</span><br><span class="line">r=rand(rmin,rmax)</span><br></pre></td></tr></table></figure>
 <p>通过球心距离判断颗粒是否相交：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dist = sqrt((sph(j,1)-x)**2+(sph(j,2)-y)**2+(sph(j,3)-z)**2)</span><br></pre></td></tr></table></figure>
-<p> 本文假定晶胞内颗粒数目为16，随机生成的晶胞模型如下</p>
+<p> 本文设定晶胞内颗粒数目为16，随机生成的晶胞模型如下</p>
  <center> 随机生成1</center>
 
 <p><img src="https://i.loli.net/2019/07/28/5d3d26632fbf936221.png" alt="30C.png"></p>
