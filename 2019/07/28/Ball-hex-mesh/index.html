@@ -91,7 +91,7 @@
 <meta property="og:image" content="https://i.loli.net/2019/07/28/5d3d1c80a18d436237.png">
 <meta property="og:image" content="https://i.loli.net/2019/07/28/5d3d1c80a1ba212686.png">
 <meta property="og:image" content="https://i.loli.net/2019/07/28/5d3d1c80af49486095.png">
-<meta property="og:updated_time" content="2019-07-28T04:01:50.362Z">
+<meta property="og:updated_time" content="2019-07-28T04:04:35.236Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="APDL实现小球六面体网格划分">
 <meta name="twitter:description" content="谈到网格划分，多数CAE工程师首先会想到HyperMesh、ANSA、ICEM等专业前处理软件。不可否认，这些专业前处理软件相对ANSYS MAPDL，在几何接口、几何清理、网格划分、单元节点操作等方面具备较大的优势。其实，对于较为规则的几何，在ANSYS中适当进行切分和网格控制，也可以快速划分出高质量的网格。 小球在CAE工程分析中有着许多应用场景，如流固耦合中小球入水、手机屏幕落球冲击、金属表">
@@ -373,7 +373,8 @@
       
         <p>谈到网格划分，多数CAE工程师首先会想到HyperMesh、ANSA、ICEM等专业前处理软件。不可否认，这些专业前处理软件相对ANSYS MAPDL，在几何接口、几何清理、网格划分、单元节点操作等方面具备较大的优势。其实，对于较为规则的几何，在ANSYS中适当进行切分和网格控制，也可以快速划分出高质量的网格。</p>
 <p>小球在CAE工程分析中有着许多应用场景，如流固耦合中小球入水、手机屏幕落球冲击、金属表现侵蚀等。小球的几何建模非常简单，但划分规则的六面体网格，对一些工程师来说也许并不是那么容易。</p>
-<p>下面以实心小球为例，25行APDL命令即可实现小球的几何建模、几何剖分、单元定义、网格控制、网格划分、网格镜像，最终生成规则的六面体网格，附上几张最终网格效果图，如下。<br><img src="https://i.loli.net/2019/07/28/5d3d1c80b11d088627.png" alt="BallHexMesh_10.png"></p>
+<p>下面以实心小球为例，25行APDL命令即可实现小球的几何建模、几何剖分、单元定义、网格控制、网格划分、网格镜像，最终生成规则的六面体网格，附上几张最终网格效果图，如下。</p>
+<p><img src="https://i.loli.net/2019/07/28/5d3d1c80b11d088627.png" alt="BallHexMesh_10.png"></p>
 <center> 图1 小球几何剖分 </center>
 
 <p><img src="https://i.loli.net/2019/07/28/5d3d1c80a18d436237.png" alt="BallHexMesh_01.png"></p>
